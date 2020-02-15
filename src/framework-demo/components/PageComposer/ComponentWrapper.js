@@ -12,6 +12,10 @@ const style = {
   position: 'relative',
 };
 
+const preStyle = {
+  margin: '1em',
+};
+
 const shadowStyle = {
   position: 'absolute',
   top: 0,
@@ -254,9 +258,9 @@ class ComponentWrapper extends Component {
       return (
         <div key={elementKey} style={style}>
           <div>
-        <pre>
+        <pre style={preStyle}>
           <code>
-            Drag and drop here
+            &oplus;
           </code>
         </pre>
           </div>
