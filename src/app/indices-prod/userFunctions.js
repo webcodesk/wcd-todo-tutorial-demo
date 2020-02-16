@@ -1,2 +1,2 @@
 
-export default {'usr':{'todo':{'ToDoActions':require('usr/todo/ToDoActions.funcs'),},},};
+export default {'usr':{'atom':{'ActionButton':require('usr/atom/ActionButton.funcs'),},'todo':{'ToDoActions':require('usr/todo/ToDoActions.funcs'),},},};

@@ -19,25 +19,69 @@ export const setActiveNavigationTab = (
 /**
  *
  */
-export const initializeToDoNotes = (options, {stateByDispatch, history}) => async (dispatch) => {
+export const initializeNotes = (options, {stateByDispatch, history}) => async (dispatch) => {
   if (stateByDispatch) {
     const { todoNotesListProps, navigationTabsProps } = stateByDispatch;
     let newTodoNotesListProps = {...todoNotesListProps};
     let newNavigationTabsProps = {...navigationTabsProps};
     try {
       let storedNotes = await getToDoNotes();
-      console.info('storedNotes: ', storedNotes);
       if (!storedNotes && todoNotesListProps.notes) {
         storedNotes = todoNotesListProps.notes;
-        console.info('replace storedNotes: ', storedNotes);
         await saveToDoNotes(storedNotes);
       }
       newTodoNotesListProps.notes = storedNotes;
-      console.info('newTodoNotesListProps: ', newTodoNotesListProps);
       newNavigationTabsProps.activeTabType = 'all';
       dispatch({
         todoNotesListProps: newTodoNotesListProps,
         navigationTabsProps: newNavigationTabsProps
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+};
+
+/**
+ *
+ */
+export const toggleNoteCompleted = (options, {stateByDispatch}) => async (dispatch) => {
+  if (stateByDispatch && options) {
+    const { todoNotesListProps } = stateByDispatch;
+    let newTodoNotesListProps = {...todoNotesListProps};
+    const { noteIndex } = options;
+    try {
+      const noteItem = newTodoNotesListProps.notes[noteIndex];
+      if (noteItem) {
+        newTodoNotesListProps.notes[noteIndex].isCompleted =
+          !newTodoNotesListProps.notes[noteIndex].isCompleted;
+      }
+      await saveToDoNotes(newTodoNotesListProps.notes);
+      dispatch({
+        todoNotesListProps: newTodoNotesListProps,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+};
+
+/**
+ *
+ */
+export const deleteNote = (options, {stateByDispatch}) => async (dispatch) => {
+  if (stateByDispatch && options) {
+    const { todoNotesListProps } = stateByDispatch;
+    let newTodoNotesListProps = {...todoNotesListProps};
+    const { noteIndex } = options;
+    try {
+      const noteItem = newTodoNotesListProps.notes[noteIndex];
+      if (noteItem) {
+        newTodoNotesListProps.notes.splice(noteIndex, 1);
+      }
+      await saveToDoNotes(newTodoNotesListProps.notes);
+      dispatch({
+        todoNotesListProps: newTodoNotesListProps,
       });
     } catch (e) {
       console.error(e);

@@ -12,4 +12,12 @@ export const ToDoNotesListTypes = {
     noteText: PropTypes.string,
     isCompleted: PropTypes.bool,
   })),
+  /**
+   *
+   */
+  onToggleNoteCompleted: PropTypes.func,
+  /**
+   *
+   */
+  onDeleteNote: PropTypes.func,
 };

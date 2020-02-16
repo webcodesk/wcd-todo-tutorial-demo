@@ -24,8 +24,8 @@ class ActionButton extends React.Component {
       e.stopPropagation();
       e.preventDefault();
     }
-    const { onClick } = this.props;
-    if (onClick) { this.props.onClick(); }
+    const { onClick, href } = this.props;
+    if (onClick) { onClick({href}); }
   };
 
   render() {

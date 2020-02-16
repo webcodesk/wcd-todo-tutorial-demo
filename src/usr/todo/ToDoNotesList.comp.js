@@ -43,6 +43,18 @@ class ToDoNotesList extends React.Component {
     super(props);
   }
 
+  handleToggleNoteCompleted = (index) => e => {
+    if (this.props.onToggleNoteCompleted) {
+      this.props.onToggleNoteCompleted({noteIndex: index});
+    }
+  };
+
+  handleDeleteNote = (index) => e => {
+    if (this.props.onDeleteNote) {
+      this.props.onDeleteNote({noteIndex: index});
+    }
+  };
+
   render() {
     const { classes, emptyListMessage, notes } = this.props;
     if (!notes || notes.length === 0) {
@@ -66,14 +78,14 @@ class ToDoNotesList extends React.Component {
                       <Checkbox
                         color="primary"
                         checked={row.isCompleted}
-                        // onChange={onSelectAllClick}
+                        onChange={this.handleToggleNoteCompleted(idx)}
                       />
                     </NoBorderCell>
                     <NoBorderCell align="left" style={{ color: 'inherit' }}>
                       {row.noteText}
                     </NoBorderCell>
                     <NoBorderCell padding="checkbox">
-                      <IconButton>
+                      <IconButton onClick={this.handleDeleteNote(idx)}>
                         <DeleteIcon/>
                       </IconButton>
                     </NoBorderCell>
@@ -86,14 +98,14 @@ class ToDoNotesList extends React.Component {
                       <Checkbox
                         color="primary"
                         checked={row.isCompleted}
-                        // onChange={onSelectAllClick}
+                        onChange={this.handleToggleNoteCompleted(idx)}
                       />
                     </TableCell>
                     <TableCell align="left" style={{ color: 'inherit' }}>
                       {row.noteText}
                     </TableCell>
                     <TableCell padding="checkbox">
-                      <IconButton>
+                      <IconButton onClick={this.handleDeleteNote(idx)}>
                         <DeleteIcon/>
                       </IconButton>
                     </TableCell>
