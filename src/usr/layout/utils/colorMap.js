@@ -1,4 +1,5 @@
 import get from 'lodash/get';
+import isString from 'lodash/isString';
 import red from '@material-ui/core/colors/red';
 import pink from '@material-ui/core/colors/pink';
 import purple from '@material-ui/core/colors/purple';
@@ -20,6 +21,8 @@ import grey from '@material-ui/core/colors/grey';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const hueMap = {
+  'white': '#ffffff',
+  'black': '#000000',
   'red': red,
   'pink': pink,
   'purple': purple,
@@ -49,7 +52,7 @@ export default function (colorHue, colorShade, theme) {
       if (theme) {
         foundColor = get(theme, `palette.${colorHue}`);
       }
-    } else {
+    } else if (!isString(foundColor)) {
       if (colorShade) {
         foundColor = foundColor[colorShade];
       } else {

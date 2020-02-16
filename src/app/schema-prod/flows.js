@@ -1,2 +1,2 @@
 
-export default {"test":[{"type":"component","props":{"componentName":"applicationStartWrapper","componentInstance":"wrapperInstance"}}]};
+export default {"test":[{"type":"component","props":{"componentName":"usr.todo.NavigationTabs","componentInstance":"mainNavigationTabs"},"events":[{"name":"onChangeActiveTab","targets":[{"type":"userFunction","props":{"functionName":"usr.todo.ToDoActions.setActiveNavigationTab"},"events":[{"name":"props","targets":[{"type":"component","props":{"componentName":"usr.todo.NavigationTabs","componentInstance":"mainNavigationTabs"}}]}]}]}]}]};

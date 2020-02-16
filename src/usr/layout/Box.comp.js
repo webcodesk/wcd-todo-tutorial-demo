@@ -106,9 +106,6 @@ class Box extends React.Component {
 Box.propTypes = BoxTypes;
 
 Box.defaultProps = {
-  display: {
-    display: 'flex',
-  },
   sizing: {
     width: '100%'
   },

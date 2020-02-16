@@ -21,5 +21,5 @@ export const ContainerTypes = {
   /**
    * The content of the container
    */
-  children: PropTypes.arrayOf(PropTypes.element),
+  content: PropTypes.element,
 };

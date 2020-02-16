@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { ColorTypes } from './props/color.props';
+import { PaddingSpacingByThemeTypes } from './props/spacingByTheme.props';
 
 export const PaperTypes = {
   /**
@@ -21,6 +23,15 @@ export const PaperTypes = {
    * The variant to use.
    */
   variant: PropTypes.oneOf(['elevation', 'outlined']),
+  // Sets the color of the component
+  palette: PropTypes.shape({
+    color: PropTypes.shape(ColorTypes),
+    backgroundColor: PropTypes.shape(ColorTypes),
+  }),
+  /**
+   * A group of the padding properties.
+   */
+  paddingSpacing: PropTypes.shape(PaddingSpacingByThemeTypes),
   /**
    * Children components
    */

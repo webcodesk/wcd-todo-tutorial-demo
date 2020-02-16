@@ -15,14 +15,14 @@ class Container extends React.Component {
   }
 
   render() {
-    const { classes, children, fixed, maxWidth, disableMaxWidth } = this.props;
+    const { classes, content, fixed, maxWidth, disableMaxWidth } = this.props;
     return (
       <ContainerMUI
         className={classes.root}
         fixed={fixed}
         maxWidth={disableMaxWidth ? false : maxWidth}
       >
-        {children}
+        {content}
       </ContainerMUI>
     );
   }
@@ -34,7 +34,7 @@ Container.defaultProps = {
   fixed: false,
   maxWidth: 'lg',
   disableMaxWidth: false,
-  children: [<span />]
+  content: <span />
 };
 
 export default withStyles(styles)(Container);
