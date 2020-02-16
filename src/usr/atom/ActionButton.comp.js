@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import FabMUI from '@material-ui/core/Fab';
 import pickWithValues from './utils/pickWithValues';
 import ButtonCircularProgress from './lib/ButtonCircularProgress';
-import { AddNoteButtonTypes } from './AddNoteButton.props';
+import { ActionButtonTypes } from './ActionButton.props';
 
 const styles = theme => ({
   button: {
@@ -14,7 +14,7 @@ const styles = theme => ({
   }
 });
 
-class AddNoteButton extends React.Component {
+class ActionButton extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -60,9 +60,9 @@ class AddNoteButton extends React.Component {
   }
 }
 
-AddNoteButton.propTypes = AddNoteButtonTypes;
+ActionButton.propTypes = ActionButtonTypes;
 
-AddNoteButton.defaultProps = {
+ActionButton.defaultProps = {
 };
 
-export default withStyles(styles)(AddNoteButton);
+export default withStyles(styles)(ActionButton);

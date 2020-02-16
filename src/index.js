@@ -42,6 +42,7 @@ function initMuiThemeSettings(appSettings) {
       };
     }
   }
+  return muiTheme;
 }
 
 if (process.env.NODE_ENV !== 'production') {

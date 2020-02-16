@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const AddNoteButtonTypes = {
+export const ActionButtonTypes = {
   /**
    * Button label text
    */

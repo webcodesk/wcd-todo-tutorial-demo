@@ -102,9 +102,10 @@ class Container extends React.Component {
       children
     } = this.props;
     const elementsProps = pickReactElements(wrappedProps) || {};
+    const newProps = { ...wrappedProps, ...this.wrappedHandlers, ...stateProps,  ...elementsProps};
     return React.createElement(
       wrappedComponent,
-      { ...wrappedProps, ...this.wrappedHandlers, ...stateProps,  ...elementsProps},
+      newProps,
       children
     );
   }
@@ -131,11 +132,12 @@ export default function createContainer (
   componentInstance,
   componentKey,
   containerEventHandlers,
+  isTargetContainer,
   props = {},
   nestedComponents = null
 ) {
 
-  if (containerEventHandlers && containerEventHandlers.length > 0) {
+  if ((containerEventHandlers && containerEventHandlers.length > 0) || isTargetContainer) {
     // create a connected container only for components that participate in the flow
     const actions = createContainerActions(`${componentName}_${componentInstance}`, containerEventHandlers);
     const mapDispatchToProps = (dispatch) => {
