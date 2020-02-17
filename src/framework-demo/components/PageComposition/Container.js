@@ -102,10 +102,9 @@ class Container extends React.Component {
       children
     } = this.props;
     const elementsProps = pickReactElements(wrappedProps) || {};
-    const newProps = { ...wrappedProps, ...this.wrappedHandlers, ...stateProps,  ...elementsProps};
     return React.createElement(
       wrappedComponent,
-      newProps,
+      { ...wrappedProps, ...this.wrappedHandlers, ...stateProps,  ...elementsProps},
       children
     );
   }
