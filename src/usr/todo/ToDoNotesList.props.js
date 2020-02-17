@@ -9,6 +9,7 @@ export const ToDoNotesListTypes = {
    *
    */
   notes: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
     noteText: PropTypes.string,
     isCompleted: PropTypes.bool,
   })),

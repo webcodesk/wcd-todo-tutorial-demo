@@ -76,7 +76,7 @@ class ToDoNotesList extends React.Component {
             {notes.map((row, idx) => {
               if (idx === notes.length - 1) {
                 return (
-                  <TableRow key={`row${idx}`}>
+                  <TableRow key={row.id}>
                     <NoBorderCell padding="checkbox">
                       <Checkbox
                         color="primary"
@@ -96,7 +96,7 @@ class ToDoNotesList extends React.Component {
                 );
               } else {
                 return (
-                  <TableRow key={`row${idx}`}>
+                  <TableRow key={row.id}>
                     <TableCell padding="checkbox">
                       <Checkbox
                         color="primary"
@@ -128,7 +128,8 @@ ToDoNotesList.propTypes = ToDoNotesListTypes;
 ToDoNotesList.defaultProps = {
   emptyListMessage: 'There are no notes',
   notes: [
-    {noteText: 'Initial todo record', isCompleted: false}
+    {id: '01', noteText: 'Initial todo record', isCompleted: true},
+    {id: '02', noteText: 'The second record', isCompleted: false}
   ]
 };
 
