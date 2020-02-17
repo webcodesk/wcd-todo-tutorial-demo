@@ -124,6 +124,7 @@ export const saveNewNote = (options, {stateByDispatch, history}) => async (dispa
     const { noteText, hrefOnSaveNote } = options;
     const { todoNotesListProps } = stateByDispatch;
     let newTodoNotesListProps = {...todoNotesListProps};
+    newTodoNotesListProps.notes = newTodoNotesListProps.notes || [];
     newTodoNotesListProps.notes.push({
       noteText
     });
