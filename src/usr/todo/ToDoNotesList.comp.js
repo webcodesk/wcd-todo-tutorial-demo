@@ -20,6 +20,9 @@ const styles = theme => ({
     justifyContent: 'center',
     width: '100%'
   },
+  completedText: {
+    textDecoration: 'line-through',
+  }
 });
 
 const DeleteIcon = () => (
@@ -82,7 +85,7 @@ class ToDoNotesList extends React.Component {
                       />
                     </NoBorderCell>
                     <NoBorderCell align="left" style={{ color: 'inherit' }}>
-                      {row.noteText}
+                      {row.isCompleted ? <span className={classes.completedText}>{row.noteText}</span> : row.noteText}
                     </NoBorderCell>
                     <NoBorderCell padding="checkbox">
                       <IconButton onClick={this.handleDeleteNote(idx)}>
@@ -102,7 +105,7 @@ class ToDoNotesList extends React.Component {
                       />
                     </TableCell>
                     <TableCell align="left" style={{ color: 'inherit' }}>
-                      {row.noteText}
+                      {row.isCompleted ? <span className={classes.completedText}>{row.noteText}</span> : row.noteText}
                     </TableCell>
                     <TableCell padding="checkbox">
                       <IconButton onClick={this.handleDeleteNote(idx)}>

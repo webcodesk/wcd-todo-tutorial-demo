@@ -141,3 +141,23 @@ export const saveNewNote = (options, {stateByDispatch, history}) => async (dispa
   }
 };
 
+export const filterByNavigation = (options, {stateByDispatch}) => async (dispatch) => {
+  if (stateByDispatch && options) {
+    const { tabType } = options;
+    let storedNotes = await getToDoNotes();
+    if (storedNotes) {
+      if (tabType === 'active') {
+        storedNotes = storedNotes.filter(i => !i.isCompleted);
+      } else if (tabType === 'completed') {
+        storedNotes = storedNotes.filter(i => !!i.isCompleted);
+      }
+      const { todoNotesListProps } = stateByDispatch;
+      let newTodoNotesListProps = {...todoNotesListProps};
+      newTodoNotesListProps.notes = storedNotes;
+      dispatch({
+        todoNotesListProps: newTodoNotesListProps,
+      });
+    }
+  }
+};
+
