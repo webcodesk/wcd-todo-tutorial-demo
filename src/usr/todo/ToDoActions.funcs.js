@@ -88,3 +88,56 @@ export const deleteNote = (options, {stateByDispatch}) => async (dispatch) => {
     }
   }
 };
+
+export const cancelAddingNote = (options, {history}) => dispatch => {
+  if (options) {
+    const { hrefOnCancel } = options;
+    if (hrefOnCancel) {
+      history.push(hrefOnCancel);
+    }
+  }
+};
+
+export const validateNoteText = (options, {stateByDispatch, history}) => dispatch => {
+  if (options) {
+    const { noteText, hrefOnSaveNote } = options;
+    if (noteText) {
+      dispatch({
+        success: {
+          noteText,
+          hrefOnSaveNote
+        }
+      });
+    } else {
+      if (stateByDispatch) {
+        const { error } = stateByDispatch;
+        let newProps = {...error};
+        newProps.isError = true;
+        dispatch({error: newProps});
+      }
+    }
+  }
+};
+
+export const saveNewNote = (options, {stateByDispatch, history}) => async (dispatch) => {
+  if (stateByDispatch && options) {
+    const { noteText, hrefOnSaveNote } = options;
+    const { todoNotesListProps } = stateByDispatch;
+    let newTodoNotesListProps = {...todoNotesListProps};
+    newTodoNotesListProps.notes.push({
+      noteText
+    });
+    try {
+      await saveToDoNotes(newTodoNotesListProps.notes);
+      if (hrefOnSaveNote) {
+        history.push(hrefOnSaveNote);
+      }
+      dispatch({
+        todoNotesListProps: newTodoNotesListProps,
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+};
+
