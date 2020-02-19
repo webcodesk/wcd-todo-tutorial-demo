@@ -20,17 +20,9 @@ export const NewNoteFormTypes = {
    */
   helperText: PropTypes.string,
   /**
-   * The URL for navigating when the user saves a note
-   */
-  hrefOnSaveNote: PropTypes.string,
-  /**
    * Rows number
    */
   rowsNumber: PropTypes.number,
-  /**
-   * The URL for navigating when the user cancels
-   */
-  hrefOnCancel: PropTypes.string,
   /**
    *
    */

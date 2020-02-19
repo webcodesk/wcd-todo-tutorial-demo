@@ -50,7 +50,7 @@ class PageFrameWithActionButton extends React.Component {
       mainAreaChildren,
       actionButtonContent,
       applicationBarContent,
-      htmlPageTitle
+      htmlPageTitle,
     } = this.props;
     const applicationBarStyle = {};
     if (applicationBarPalette) {

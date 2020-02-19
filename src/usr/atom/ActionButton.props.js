@@ -25,10 +25,10 @@ export const ActionButtonTypes = {
    * The size of the button. `small` is equivalent to the dense button styling.
    */
   size: PropTypes.oneOf(['', 'small', 'medium', 'large']),
-  /**
-   * The URL to link to when the button is clicked. If defined, an a element will be used as the root node.
-   */
-  href: PropTypes.string,
+  // /**
+  //  * The URL to link to when the button is clicked. If defined, an a element will be used as the root node.
+  //  */
+  // href: PropTypes.string,
   /**
    * If true the circular progress is shown and button is disabled.
    */

@@ -4,162 +4,164 @@
  */
 import { getToDoNotes, saveToDoNotes } from './utils/storage';
 
-export const setActiveNavigationTab = (
-  options,
-  { stateByDispatch, history }
-) => dispatch => {
-  if (stateByDispatch && options) {
-    const { tabType } = options;
-    const { props } = stateByDispatch;
-    const newProps = {...props, ...{activeTabType: tabType}};
-    dispatch({ navigationTabsProps:  newProps});
+function filterNotesByActiveTabType (tabType, notes) {
+  notes = notes || [];
+  let result = notes;
+  if (tabType === 'active') {
+    result = notes.filter(i => !i.isCompleted);
+  } else if (tabType === 'completed') {
+    result = notes.filter(i => !!i.isCompleted);
+  }
+  return result;
+}
+
+/**
+ *
+ */
+// export const initializeNotes = (options, { stateByDispatch, history }) => async (dispatch) => {
+//   if (stateByDispatch) {
+//     const { todoNotesListProps, navigationTabsProps } = stateByDispatch;
+//     let newTodoNotesListProps = { ...todoNotesListProps };
+//     let newNavigationTabsProps = { ...navigationTabsProps };
+//     try {
+//       let storedNotes = await getToDoNotes();
+//       storedNotes = storedNotes || [];
+//       await saveToDoNotes(storedNotes);
+//       newTodoNotesListProps.notes = storedNotes;
+//       newNavigationTabsProps.activeTabType = 'all';
+//       dispatch({
+//         todoNotesListProps: newTodoNotesListProps,
+//         navigationTabsProps: newNavigationTabsProps
+//       });
+//     } catch (e) {
+//       alert(e.message);
+//     }
+//   }
+// };
+
+/**
+ *
+ */
+export const toggleNoteCompleted = (noteId) => async (dispatch) => {
+  if (noteId) {
+      try {
+        let storedNotes = await getToDoNotes();
+        storedNotes = storedNotes || [];
+        const noteItem = storedNotes.find(i => i.id === noteId);
+        if (noteItem) {
+          noteItem.isCompleted =
+            !noteItem.isCompleted;
+        }
+        dispatch({
+          notes: storedNotes
+        });
+      } catch (e) {
+        alert(e.message);
+      }
   }
 };
 
 /**
  *
  */
-export const initializeNotes = (options, {stateByDispatch, history}) => async (dispatch) => {
-  if (stateByDispatch) {
-    const { todoNotesListProps, navigationTabsProps } = stateByDispatch;
-    let newTodoNotesListProps = {...todoNotesListProps};
-    let newNavigationTabsProps = {...navigationTabsProps};
+export const deleteNote = (noteId) => async (dispatch) => {
+  if (noteId) {
     try {
       let storedNotes = await getToDoNotes();
-      if (!storedNotes && todoNotesListProps.notes) {
-        storedNotes = todoNotesListProps.notes;
-        await saveToDoNotes(storedNotes);
+      const noteItemIndex = storedNotes.findIndex(i => i.id === noteId);
+      if (noteItemIndex >= 0) {
+        storedNotes.splice(noteItemIndex, 1);
       }
-      newTodoNotesListProps.notes = storedNotes;
-      newNavigationTabsProps.activeTabType = 'all';
       dispatch({
-        todoNotesListProps: newTodoNotesListProps,
-        navigationTabsProps: newNavigationTabsProps
+        notes: storedNotes,
       });
     } catch (e) {
-      console.error(e);
+      alert(e.message);
     }
   }
 };
 
-/**
- *
- */
-export const toggleNoteCompleted = (options, {stateByDispatch}) => async (dispatch) => {
-  if (stateByDispatch && options) {
-    const { todoNotesListProps } = stateByDispatch;
-    let newTodoNotesListProps = {...todoNotesListProps};
-    const { noteIndex } = options;
-    try {
-      const noteItem = newTodoNotesListProps.notes[noteIndex];
-      if (noteItem) {
-        newTodoNotesListProps.notes[noteIndex].isCompleted =
-          !newTodoNotesListProps.notes[noteIndex].isCompleted;
-      }
-      await saveToDoNotes(newTodoNotesListProps.notes);
-      dispatch({
-        todoNotesListProps: newTodoNotesListProps,
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  }
-};
-
-/**
- *
- */
-export const deleteNote = (options, {stateByDispatch}) => async (dispatch) => {
-  if (stateByDispatch && options) {
-    const { todoNotesListProps } = stateByDispatch;
-    let newTodoNotesListProps = {...todoNotesListProps};
-    const { noteIndex } = options;
-    try {
-      const noteItem = newTodoNotesListProps.notes[noteIndex];
-      if (noteItem) {
-        newTodoNotesListProps.notes.splice(noteIndex, 1);
-      }
-      await saveToDoNotes(newTodoNotesListProps.notes);
-      dispatch({
-        todoNotesListProps: newTodoNotesListProps,
-      });
-    } catch (e) {
-      console.error(e);
-    }
-  }
-};
-
-export const cancelAddingNote = (options, {history}) => dispatch => {
-  if (options) {
-    const { hrefOnCancel } = options;
-    if (hrefOnCancel) {
-      history.push(hrefOnCancel);
-    }
-  }
-};
-
-export const validateNoteText = (options, {stateByDispatch, history}) => dispatch => {
-  if (options) {
-    const { noteText, hrefOnSaveNote } = options;
-    if (noteText) {
-      dispatch({
-        success: {
-          noteText,
-          hrefOnSaveNote
-        }
-      });
-    } else {
-      if (stateByDispatch) {
-        const { error } = stateByDispatch;
-        let newProps = {...error};
-        newProps.isError = true;
-        dispatch({error: newProps});
-      }
-    }
-  }
-};
-
-export const saveNewNote = (options, {stateByDispatch, history}) => async (dispatch) => {
-  if (stateByDispatch && options) {
-    const { noteText, hrefOnSaveNote } = options;
-    const { todoNotesListProps } = stateByDispatch;
-    let newTodoNotesListProps = {...todoNotesListProps};
-    newTodoNotesListProps.notes = newTodoNotesListProps.notes || [];
-    newTodoNotesListProps.notes.push({
+export const createNewNote = (noteText, { stateByDispatch, history }) => async (dispatch) => {
+  try {
+    let storedNotes = await getToDoNotes();
+    storedNotes = storedNotes || [];
+    storedNotes.push({
       id: `${Date.now()}`,
       noteText
     });
+    dispatch({
+      notes: storedNotes,
+    });
+  } catch (e) {
+    alert(e.message);
+  }
+};
+
+// export const filterByNavigation = (options, { stateByDispatch }) => async (dispatch) => {
+//   if (stateByDispatch && options) {
+//     const { tabType } = options;
+//     const { todoNotesListProps } = stateByDispatch;
+//     if (todoNotesListProps) {
+//       try {
+//         let storedNotes = await getToDoNotes();
+//         storedNotes = storedNotes || [];
+//         let newTodoNotesListProps = { ...todoNotesListProps };
+//         newTodoNotesListProps.notes = filterNotesByActiveTabType(tabType, storedNotes);
+//         dispatch({
+//           todoNotesListProps: newTodoNotesListProps,
+//         });
+//       } catch (e) {
+//         console.error(e);
+//       }
+//     }
+//   }
+// };
+
+/**
+ *
+ */
+export const getNotes = () => async dispatch => {
+  try {
+    let storedNotes = await getToDoNotes();
+    storedNotes = storedNotes || [];
+    dispatch({
+      notes: storedNotes
+    });
+  } catch (e) {
+    alert(e.message);
+  }
+};
+
+/**
+ *
+ */
+export const saveNotes = (notes) => async dispatch => {
+  if (notes) {
     try {
-      await saveToDoNotes(newTodoNotesListProps.notes);
-      if (hrefOnSaveNote) {
-        history.push(hrefOnSaveNote);
-      }
+      await saveToDoNotes(notes);
       dispatch({
-        todoNotesListProps: newTodoNotesListProps,
+        notes,
+        success: true,
       });
     } catch (e) {
-      console.error(e);
+      alert(e.message);
     }
   }
 };
 
-export const filterByNavigation = (options, {stateByDispatch}) => async (dispatch) => {
-  if (stateByDispatch && options) {
-    const { tabType } = options;
-    let storedNotes = await getToDoNotes();
-    if (storedNotes) {
-      if (tabType === 'active') {
-        storedNotes = storedNotes.filter(i => !i.isCompleted);
-      } else if (tabType === 'completed') {
-        storedNotes = storedNotes.filter(i => !!i.isCompleted);
+export const filterNotes = (notes, {stateByDispatch}) => dispatch => {
+  if (stateByDispatch && notes) {
+    const { todoNotesListProps, navigationTabsProps } = stateByDispatch;
+    if (todoNotesListProps) {
+      let newTodoNotesListProps = { ...todoNotesListProps };
+      if (navigationTabsProps) {
+        newTodoNotesListProps.notes =
+          filterNotesByActiveTabType(navigationTabsProps.activeTabType, notes);
       }
-      const { todoNotesListProps } = stateByDispatch;
-      let newTodoNotesListProps = {...todoNotesListProps};
-      newTodoNotesListProps.notes = storedNotes;
       dispatch({
         todoNotesListProps: newTodoNotesListProps,
+        navigationTabsProps,
       });
     }
   }
 };
-

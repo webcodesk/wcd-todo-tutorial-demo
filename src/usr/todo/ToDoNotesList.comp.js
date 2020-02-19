@@ -46,15 +46,15 @@ class ToDoNotesList extends React.Component {
     super(props);
   }
 
-  handleToggleNoteCompleted = (index) => e => {
+  handleToggleNoteCompleted = (id) => e => {
     if (this.props.onToggleNoteCompleted) {
-      this.props.onToggleNoteCompleted({noteIndex: index});
+      this.props.onToggleNoteCompleted(id);
     }
   };
 
-  handleDeleteNote = (index) => e => {
+  handleDeleteNote = (id) => e => {
     if (this.props.onDeleteNote) {
-      this.props.onDeleteNote({noteIndex: index});
+      this.props.onDeleteNote(id);
     }
   };
 
@@ -81,14 +81,14 @@ class ToDoNotesList extends React.Component {
                       <Checkbox
                         color="primary"
                         checked={row.isCompleted}
-                        onChange={this.handleToggleNoteCompleted(idx)}
+                        onChange={this.handleToggleNoteCompleted(row.id)}
                       />
                     </NoBorderCell>
                     <NoBorderCell align="left" style={{ color: 'inherit' }}>
                       {row.isCompleted ? <span className={classes.completedText}>{row.noteText}</span> : row.noteText}
                     </NoBorderCell>
                     <NoBorderCell padding="checkbox">
-                      <IconButton onClick={this.handleDeleteNote(idx)}>
+                      <IconButton onClick={this.handleDeleteNote(row.id)}>
                         <DeleteIcon/>
                       </IconButton>
                     </NoBorderCell>
@@ -101,14 +101,14 @@ class ToDoNotesList extends React.Component {
                       <Checkbox
                         color="primary"
                         checked={row.isCompleted}
-                        onChange={this.handleToggleNoteCompleted(idx)}
+                        onChange={this.handleToggleNoteCompleted(row.id)}
                       />
                     </TableCell>
                     <TableCell align="left" style={{ color: 'inherit' }}>
                       {row.isCompleted ? <span className={classes.completedText}>{row.noteText}</span> : row.noteText}
                     </TableCell>
                     <TableCell padding="checkbox">
-                      <IconButton onClick={this.handleDeleteNote(idx)}>
+                      <IconButton onClick={this.handleDeleteNote(row.id)}>
                         <DeleteIcon/>
                       </IconButton>
                     </TableCell>

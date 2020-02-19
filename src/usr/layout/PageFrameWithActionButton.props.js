@@ -45,4 +45,8 @@ export const PageFrameWithActionButtonTypes = {
    * Node
    */
   applicationBarContent: PropTypes.node,
+  /**
+   * Hidden components
+   */
+  hiddenComponents: PropTypes.arrayOf(PropTypes.node),
 };

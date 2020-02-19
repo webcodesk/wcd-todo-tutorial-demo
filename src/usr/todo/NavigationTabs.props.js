@@ -16,4 +16,8 @@ export const NavigationTabsTypes = {
    * Triggered when the user activates another tab
    */
   onChangeActiveTab: PropTypes.func,
+  /**
+   * Triggered when the active tab type was updated
+   */
+  onActiveTabUpdated: PropTypes.func,
 };

@@ -55,16 +55,10 @@ class NewNoteForm extends React.Component {
       e.preventDefault();
     }
     const {
-      hrefOnSaveNote,
-      hrefOnCancel,
       onSaveNote,
     } = this.props;
     if (onSaveNote) {
-      onSaveNote({
-        noteText: this.state.noteText,
-        hrefOnSaveNote,
-        hrefOnCancel,
-      });
+      onSaveNote(this.state.noteText);
     }
   };
 
@@ -74,16 +68,11 @@ class NewNoteForm extends React.Component {
       e.preventDefault();
     }
     const {
-      hrefOnSaveNote,
-      hrefOnCancel,
       onCancel,
     } = this.props;
     if (onCancel) {
       this.setState({noteText: ''});
-      onCancel({
-        hrefOnSaveNote,
-        hrefOnCancel,
-      });
+      onCancel();
     }
   };
 

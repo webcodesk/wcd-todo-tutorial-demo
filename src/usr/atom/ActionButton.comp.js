@@ -24,15 +24,15 @@ class ActionButton extends React.Component {
       e.stopPropagation();
       e.preventDefault();
     }
-    const { onClick, href } = this.props;
-    if (onClick) { onClick({href}); }
+    const { onClick} = this.props;
+    if (onClick) { onClick(); }
   };
 
   render() {
     const { classes, label, color, variant, disabled, icon, size, href, loading } = this.props;
-    console.info('add btn: ', { label, color, variant, disabled, size, href, loading });
+    console.info('add btn: ', { label, color, variant, disabled, size, loading });
     // const muiButtonProps = {...this.props, ...pickBy({variant, color, disabled, size, href}, i => !isNil(i))};
-    const muiButtonProps = pickWithValues({variant, color, disabled, size, href});
+    const muiButtonProps = pickWithValues({variant, color, disabled, size});
     let labelElement = null;
     if (label) {
       if (icon) {
