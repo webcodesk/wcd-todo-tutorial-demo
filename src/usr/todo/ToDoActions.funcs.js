@@ -158,6 +158,7 @@ export const filterNotes = (notes, {stateByDispatch}) => dispatch => {
         newTodoNotesListProps.notes =
           filterNotesByActiveTabType(navigationTabsProps.activeTabType, notes);
       }
+      console.info('filter notes navigationTabsProps: ', navigationTabsProps);
       dispatch({
         todoNotesListProps: newTodoNotesListProps,
         navigationTabsProps,
