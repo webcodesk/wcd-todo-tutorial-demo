@@ -13,30 +13,22 @@ const userFunctions = require('./app/indices/userFunctions').default;
 
 function initMuiThemeSettings(appSettings) {
   const muiTheme = {};
-  if (appSettings && appSettings.muiTheme) {
-    const { breakpoints, palette, zIndex } = appSettings.muiTheme;
-    muiTheme.breakpoints = breakpoints;
-    muiTheme.zIndex = zIndex;
+  if (appSettings && appSettings.theme) {
+    const { palette } = appSettings.theme;
     if (palette) {
       const { type, primary, secondary, error } = palette;
       muiTheme.palette = {
         type,
         primary: {
-          light: findColor(primary.light.colorHue, primary.light.colorShade),
           main: findColor(primary.main.colorHue, primary.main.colorShade),
-          dark: findColor(primary.dark.colorHue, primary.dark.colorShade),
           contrastText: primary.contrastText,
         },
         secondary: {
-          light: findColor(secondary.light.colorHue, secondary.light.colorShade),
           main: findColor(secondary.main.colorHue, secondary.main.colorShade),
-          dark: findColor(secondary.dark.colorHue, secondary.dark.colorShade),
           contrastText: secondary.contrastText,
         },
         error: {
-          light: findColor(error.light.colorHue, error.light.colorShade),
           main: findColor(error.main.colorHue, error.main.colorShade),
-          dark: findColor(error.dark.colorHue, error.dark.colorShade),
           contrastText: error.contrastText,
         }
       };

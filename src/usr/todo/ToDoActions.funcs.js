@@ -3,6 +3,7 @@
  * Don't forget to describe outputs and their compatibility with other functions or components.
  */
 import { getToDoNotes, saveToDoNotes } from './utils/storage';
+import { addStateListener, putIntoState } from '../../utils/state';
 
 function filterNotesByActiveTabType (tabType, notes) {
   notes = notes || [];
@@ -14,30 +15,6 @@ function filterNotesByActiveTabType (tabType, notes) {
   }
   return result;
 }
-
-/**
- *
- */
-// export const initializeNotes = (options, { stateByDispatch, history }) => async (dispatch) => {
-//   if (stateByDispatch) {
-//     const { todoNotesListProps, navigationTabsProps } = stateByDispatch;
-//     let newTodoNotesListProps = { ...todoNotesListProps };
-//     let newNavigationTabsProps = { ...navigationTabsProps };
-//     try {
-//       let storedNotes = await getToDoNotes();
-//       storedNotes = storedNotes || [];
-//       await saveToDoNotes(storedNotes);
-//       newTodoNotesListProps.notes = storedNotes;
-//       newNavigationTabsProps.activeTabType = 'all';
-//       dispatch({
-//         todoNotesListProps: newTodoNotesListProps,
-//         navigationTabsProps: newNavigationTabsProps
-//       });
-//     } catch (e) {
-//       alert(e.message);
-//     }
-//   }
-// };
 
 /**
  *
@@ -97,26 +74,6 @@ export const createNewNote = (noteText, { stateByDispatch, history }) => async (
   }
 };
 
-// export const filterByNavigation = (options, { stateByDispatch }) => async (dispatch) => {
-//   if (stateByDispatch && options) {
-//     const { tabType } = options;
-//     const { todoNotesListProps } = stateByDispatch;
-//     if (todoNotesListProps) {
-//       try {
-//         let storedNotes = await getToDoNotes();
-//         storedNotes = storedNotes || [];
-//         let newTodoNotesListProps = { ...todoNotesListProps };
-//         newTodoNotesListProps.notes = filterNotesByActiveTabType(tabType, storedNotes);
-//         dispatch({
-//           todoNotesListProps: newTodoNotesListProps,
-//         });
-//       } catch (e) {
-//         console.error(e);
-//       }
-//     }
-//   }
-// };
-
 /**
  *
  */
@@ -164,4 +121,24 @@ export const filterNotes = (notes, {stateByDispatch}) => dispatch => {
       });
     }
   }
+};
+
+const NOTES_BUFFER_STATE_KEY = 'NOTES_BUFFER_STATE_KEY';
+
+/**
+ *
+ */
+export const listenToNotesBuffer = () => dispatch => {
+  addStateListener(NOTES_BUFFER_STATE_KEY, (data) => {
+    dispatch({
+      updatedData: data,
+    });
+  });
+};
+
+/**
+ *
+ */
+export const putIntoNotesBuffer = (notes) => dispatch => {
+  putIntoState(NOTES_BUFFER_STATE_KEY, notes);
 };
