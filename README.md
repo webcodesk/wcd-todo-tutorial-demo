@@ -6,7 +6,7 @@ The team develops complex ready-to-use React components for various Web applicat
 You were given the task of putting all the finished parts together in a small web application. 
 
 Fortunately, you will not have to write code to assemble all components in an application. 
-The team uses Webcodesk - a visual builder of web applications from ready-to-use components and functions.
+The team uses Webcodesk - a visual builder of web applications from ready-to-use React components and functions.
 
 Now you have the opportunity to train in building ToDo application in online version of Webcodesk.
 
