@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Application, {getDemoFiles} from '@webcodesk/react-app-framework-demo';
-// import Application, {getDemoFiles} from './framework-demo';
 import './index.css';
 import globalSettings from './app/settings';
 import findColor from './utils/colorMap';

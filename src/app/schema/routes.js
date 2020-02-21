@@ -1,2 +1,2 @@
 
-export default [{"path":"/","pageName":"main"},{"path":"/add-new-note","pageName":"add-new-note"},{"path":"/main","pageName":"main"}];
+export default [{"path":"/","pageName":"main"},{"path":"/main","pageName":"main"}];
