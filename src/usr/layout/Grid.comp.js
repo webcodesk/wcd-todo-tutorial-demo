@@ -16,6 +16,11 @@ const styles = theme => ({
   },
 });
 
+/**
+ * A simple CSS grid wrapper that can be used to arrange the sections in two directions
+ * * horizontal layout - `row`
+ * * vertical direction - `column`
+ */
 class Grid extends React.Component {
   constructor(props) {
     super(props);

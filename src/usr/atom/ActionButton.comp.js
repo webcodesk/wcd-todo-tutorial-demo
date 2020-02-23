@@ -14,6 +14,14 @@ const styles = theme => ({
   }
 });
 
+/**
+ * _From Material UI documentation_
+ *
+ * A floating action button appears in front of all screen content, typically as a circular shape with an icon in its center. FABs come in two types: regular, and extended.
+ * Only use a FAB if it is the most suitable way to present a screen’s primary action.
+ * Only one floating action button is recommended per screen to represent the most common action.
+ *
+ */
 class ActionButton extends React.Component {
   constructor(props) {
     super(props);

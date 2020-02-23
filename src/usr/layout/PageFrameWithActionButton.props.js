@@ -34,19 +34,19 @@ export const PageFrameWithActionButtonTypes = {
    */
   mainAreaChildren: PropTypes.arrayOf(PropTypes.element),
   /**
-   * The page title shown in the browser window
+   * The page title shown in the browser window.
    */
   htmlPageTitle: PropTypes.string,
   /**
-   * Set action button here
+   * Set action button here. The `ActionButton` component instance should be used.
    */
   actionButtonContent: PropTypes.element,
   /**
-   * Node
+   * The application bar wrapper. Rendered only when there is a component instance in this node.
    */
   applicationBarContent: PropTypes.node,
   /**
-   * Hidden components
+   * An array of the hidden components.
    */
   hiddenComponents: PropTypes.arrayOf(PropTypes.node),
 };

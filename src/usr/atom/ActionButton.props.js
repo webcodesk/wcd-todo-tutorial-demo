@@ -34,7 +34,7 @@ export const ActionButtonTypes = {
    */
   loading: PropTypes.bool,
   /*
-   * Triggered when the user click on the button
+   * Triggered when the user clicks on the button. No output arguments for coupled functions.
    */
   onClick: PropTypes.func
 };

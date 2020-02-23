@@ -3,6 +3,12 @@ import SvgIconMUI from '@material-ui/core/SvgIcon';
 import { SvgIconTypes } from './SvgIcon.props';
 import pickWithValues from './utils/pickWithValues';
 
+/**
+ *
+ * Find the icon you want on https://materialdesignicons.com,
+ * copy the SVG path they provide, and use it in `paths.d` property of this component.
+ *
+ */
 class SvgIcon extends React.Component {
 
   render() {

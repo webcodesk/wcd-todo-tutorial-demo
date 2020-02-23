@@ -5,6 +5,7 @@ export const SvgIconTypes = {
   // style: PropTypes.oneOf([
   //   'filled', 'outlined', 'rounded', 'two tone', 'sharp'
   // ]),
+
   // The fontSize applied to the icon. Defaults to 24px, but can be configure to inherit font size.
   fontSize: PropTypes.oneOf([
     '', 'inherit', 'default', 'small', 'large'

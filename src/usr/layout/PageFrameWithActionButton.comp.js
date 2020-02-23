@@ -38,6 +38,9 @@ const styles = theme => ({
   },
 });
 
+/**
+ * The component should be used as a root on the page.
+ */
 class PageFrameWithActionButton extends React.Component {
   render () {
     const {

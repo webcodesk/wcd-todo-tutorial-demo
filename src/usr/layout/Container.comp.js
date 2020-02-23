@@ -9,6 +9,13 @@ const styles = theme => ({
   },
 });
 
+/**
+ * _From Material UI documentation_
+ *
+ * The container centers your content horizontally. It's the most basic layout element.
+ * * A fluid container width is bounded by that `maxWidth` property value.
+ * * If you prefer to design for a fixed set of sizes instead of trying to accommodate a fully fluid viewport, you can set the `fixed` property. The max-width matches the min-width of the current breakpoint.
+ */
 class Container extends React.Component {
   constructor(props) {
     super(props);

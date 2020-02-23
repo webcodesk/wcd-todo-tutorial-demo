@@ -6,7 +6,7 @@ export const GridContainerTypes = {
     'row', 'column'
   ]),
   /**
-   * Defines the space between the cells.
+   * Defines the space between the cells. The property is multiplied by the theme spacing value.
    */
   spacing: PropTypes.oneOf([
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'
@@ -14,10 +14,10 @@ export const GridContainerTypes = {
 };
 
 export const GridTypes = {
-  // Common container properties, it's applied only to the container component.
+  // Common grid properties.
   grid: PropTypes.shape(GridContainerTypes),
   /**
-   * Contents of the cells
+   * Contents of the cells.
    */
   cells: PropTypes.arrayOf(PropTypes.element),
 };

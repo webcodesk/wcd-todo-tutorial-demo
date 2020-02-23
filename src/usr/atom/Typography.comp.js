@@ -3,6 +3,14 @@ import TypographyMUI from '@material-ui/core/Typography';
 import pickWithValues from './utils/pickWithValues';
 import { TypographyTypes } from './Typography.props';
 
+/**
+ * _From Material UI documentation_
+ *
+ * Use typography to present your design and content as clearly and efficiently as possible.
+ *
+ * Too many type sizes and styles at once can spoil any layout.
+ * A typographic scale has a limited set of type sizes that work well together along with the layout grid.
+ */
 class Typography extends React.Component {
   render() {
     const { align, color, display, gutterBottom, noWrap, paragraph, variant, text } = this.props;
