@@ -333,3 +333,107 @@ Rename its instance to `newNotePageForm`.
 
 So far, nothing works on the pages except switching the active button in navigation.
 
+First, you need to make sure that when you click on the `mainPageActionButton` on the `main` page, 
+the user went to the `new-note` page.
+
+Create a new flow with the name `go-to-new-note-page`. 
+Move the `mainPageActionButton` instance to the `Application` item, thereby replacing it.
+
+(image)
+
+The `goToPage` function is responsible for navigation between pages. Place the function in the empty area of the flow diagram.
+The `mainPageActionButton` has an event `onClick` and you can bind this event to the input of the `goToPage` function.
+
+(image)
+
+But you may have noticed that this function is in a set of functions with the name of the `PageRouteNavigation` component.
+And this function must be somehow related to this component.
+
+Indeed, if you read the specification of the `goToPage` function, 
+you will realize that the output of the `pageRouteAbchorProps` function should be associated with an instance of the `PageRouteNavigation` component. 
+
+But we don't have a copy of that component on any page. That's because we only did visual components.
+Now it's time to add the required invisible components.
+
+Go to the tab of the page `main`. Open the page tree structure and select `mainPageFrame` instance.
+In the property editor find the `Hidden Components` array and add one item to it by clicking the "+1" button.
+
+(image)
+
+Now drag the `PageRouterAnchor` component into the free area `0 item` under `Hidden Components` in the page structure tree.
+Rename the new instance to `NewNotePageRouteAnchor` and set `/new-note` to the property `Page Route Path`.
+
+(image)
+
+Now you can go to the `go-to-new-note-page` tab of the flow diagram. 
+Drag the `newТotePageRouteAnchor` instance somewhere on the free space in the diagram. 
+Connect the `pageRouteAbchorProps` output of the `goToPage` function to the `props` input of the `newNotePageRouteAnchor` instance.
+
+Because of this connection, the function can read the value of the `Page Route Path` property and navigate to the address specified there.
+
+(image)
+
+You can try how it works in the "Live Preview" tab.
+
+Now you need to create a flow diagram to return the user to the main page if the user pressed the `Cancel` button in the form of adding a new note.
+
+However, before that, you need to add an instance of the `PageRouterAnchor` component to the `new-note` page in order to go to the `main` page.
+
+Open the tab of `new-note` page and add the item to the property `Hidden Components` in the instance `newNotePageFrame`.
+Drag the `PageRouterAnchor` component to the new item, and rename the instance to `mainPageRouteAnchor`.
+Set "/" to the `PageRoute Path` property.
+
+(image)
+
+Create a new flow chart named `cancelling-new-note`. 
+Replace the `Application` element with the `newNoteForm` instance.
+Add the `goToPage` function to the diagram and connect its input to the `onCancel` output of the `newNoteForm` instance.
+
+> The `onCancel` event occurs when the user clicks on the `Cancel` button in the `newNoteForm` form.
+
+Add the `mainPageRouteAnchor` instance (from the "Pages" section and the `new-note page`) to the diagram. 
+Connect the `pageRouteAnchorProps` output of the `goToPage` function to the `props` input of the `mainPageRouteAnchor`.
+
+(image)
+
+You can make sure that clicking the `Cancel` button brings the user back to the home page in the tab "Live Preview".
+
+The ToDo list on the home page is still empty. 
+But this is fixable because you have a set of functions that you can use to get the list of ToDo notes, filter it and save it.
+
+As far as the description of the functions in `ToDoActions` can be understood, 
+you can load all entries from the database and place them in a buffer for further work with them through this buffer.
+
+The list should be loaded at the very beginning of the application. This can easily be done in a new flow.
+
+Create a new flow chart named `load-notes-on-start'. 
+Put the `getNotes` function somewhere in the free space on the chart.
+Connect the output `onApplicationStart` of the `Application` element to the input of the `getNotes` function. 
+In this way, you have specified that the list of entries should be loaded at the start of the application in your browser.
+
+(image)
+
+The loaded list should be saved in the memory buffer. This can be done using the `putIntoNotesBuffer` function.
+Connect the output `notes` of the function `getNotes` to the input of the function `putIntoNotesBuffer`.
+
+(image)
+
+You need a memory buffer to minimize the number of function calls to update the `mainPageNotesList` component.
+
+You can connect a buffer to the component via the listener function, which will send updated data to the component every time the list in the buffer is changed.
+Otherwise, you would have to add function calls to update the list in `mainPageNotesList` instance every time the list is changed.
+
+Create a new flow chart named `update-notes-by-navigation-filter`. 
+This name is chosen because the list must always be filtered by the selected filter type in the `mainPageNavigationTabs` instance.
+
+Add the `listenToNotesBuffer` function to the diagram and connect its input to the `onApplicationStart` output of the `Application` element. 
+Thus, you have specified that when launching the application in a browser, you should start monitoring the changes in the buffer.
+
+(image)
+
+Now you need to tell what to do when the list in the buffer changes.
+Add the `filterNotes` function and connect its input to the `updatedData` output of the `listenToNotesBuffer` function.
+Add `mainPageNotesList` instance and connect its input to the output `todoNotesListProps` of the function `filterNotes`.
+Also add `mainPageNavigationTabs` instance and connect its input to the output `navigationTabsProps` of the function `filterNotes`.
+
+(image)
