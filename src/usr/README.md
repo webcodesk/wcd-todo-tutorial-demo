@@ -433,7 +433,120 @@ Thus, you have specified that when launching the application in a browser, you s
 
 Now you need to tell what to do when the list in the buffer changes.
 Add the `filterNotes` function and connect its input to the `updatedData` output of the `listenToNotesBuffer` function.
-Add `mainPageNotesList` instance and connect its input to the output `todoNotesListProps` of the function `filterNotes`.
-Also add `mainPageNavigationTabs` instance and connect its input to the output `navigationTabsProps` of the function `filterNotes`.
+Add the `mainPageNotesList` instance and connect its input to the `todoNotesListProps` output of the `filterNotes` function.
+Also add the `mainPageNavigationTabs` instance and connect its input to the `navigationTabsProps` output of the `filterNotes` function.
 
 (image)
+
+You probably guessed that in this case `filterNotes` function will read all properties of the `mainPageNavigationTabs` instance and depending on the value 
+in the `Active Tab Type` property will filter the updated list from the buffer and pass it to the `todoNotesListProps` instance properties.
+
+You still need to finish the flow where the list in the buffer is filtered according to the selected filter.
+So open the `change-navigation-filter-by-click` flow diagram and add the `getNotes` function to it.
+Connect the `onActiveTabUpdated` output of the `mainPageNavigationTabs` instance (the last one in the chain) to the input of the `getNotes` function.
+And connect the `notes` output of the `getNotes` function to the input of the function `putIntoNotesBuffer`.
+
+(image)
+
+If you now check how the application works, you will see only a blank list.
+
+(image)
+
+Now you need to create a flow that allows the user to add new ToDo items to the list.
+
+Create a new flow diagram with the name `adding-new-note`.
+Replace `Application` with the `newNoteForm` instance. 
+Add the `validateNoteText` function to the diagram. 
+Connect the `onSaveNote` output of the `newNoteForm` instance to the input of the `validateNoteText` function.
+
+> The `onSaveNote` event occurs when the user clicks on the `Save` button in the `newNoteForm` form.
+> The function gets the text of a new record at the output.
+
+(image)
+
+The `validateNoteText` function checks the text passed to it, and if the text does not pass the test, the `failure` event occurs.
+You should connect the `setError` function from the `NewNoteForm` set to the `failure` output, 
+and connect the `newNoteFormProps` output of the `setError` function to the `props` input of the `newNoteForm` instance.
+
+(image)
+
+If the verification is successful, the `validateNoteText` function sends valid text to the `noteText` output. 
+Connect the `noteText` output to the input of the function `createNewNote` from the `ToDoActions` set.
+Connect the `notes` output of the `createNewNote` function to the `saveNotes` input. 
+
+(image)
+
+If the `success` event in the `saveNotes` function is executed, it means that the new record has been successfully saved in the local database. 
+Connect the input of the `goToPage` function to the `success` output, which in turn connects to the `mainPageRouteAnchor` instance.
+
+This is how you described the chain of actions for creating a new record and saving it in the local database, and navigating to the main page.
+
+(image)
+
+You still need to update the list in the buffer so that the new list appears on the main page.
+So add the `putIntoNotesBuffer` function and connect its input to the `notes` output in the `saveNotes` function. 
+
+(image)
+
+You can check how adding a new record in the "Live Preview" tab works.
+
+There remains one more flow diagram with deleting the entry and changing the status of the entry in the list.
+Since this is all done by different events that occur in the `mainPageNotesList` instance, you can do everything in one flow diagram.
+
+Create a flow diagram with the name `toggle-or-delete-note-by-user`.
+Replace the `Application` element with the `mainPageNotesList` instance.
+Add the `deleteNote` function and connect its input to the `onDeleteNote` output of the `mainPageNotesList` instance.
+Also add the `saveNotes` function and connect its input to the `notes` output of the `deleteNote` function.
+
+And as you may have guessed, it is necessary to update the records in the buffer. 
+So drag the `putIntoNotesBuffer` function and connect its input to the `notes` output  of the `saveNotes` function.
+All right, you have described the deletion of records by clicking the delete button in the list on the main page.
+
+(image)
+
+Now describe the part of the flow to change the status of the record in the list by clicking on checkbox.
+Add the `toggleNodeCompleted` function and connect its input to the `onToggleNoteCompleted` output of the `mainPageNotesList` instance.
+Then add another element of the `saveNotes` function and connect its input to the `notes` output of the `toggleNodeCompleted` function.
+
+And of course, you have to pass the new list to the buffer.
+Add the `putIntoNotesBuffer` function and connect its input to the output of the `saveNotes` function.
+
+(image)
+
+Now your application has fully implemented functionality. Check it out in "Live Preview". 
+You can also open the application in a separate window by clicking on the `Open URL` button in the top toolbar of the "Live Preview".
+
+### Design System
+
+It is possible to set global properties of the entire application in Webcodesk projects. 
+Since this project uses the Material UI library, which allows you to create different themes for components, 
+the ability to change the settings of the theme was added to the project.
+
+Open the "Live Preview" tab and click the `Settings` button on the top toolbar. 
+You will see a property panel similar to the property panel in the page editor. 
+
+The project has implemented the smallest part of the Design System settings for the Material UI theme as an example of Webcodesk capabilities.
+
+> Read in the User Guide (link) how global settings are added to the project code.
+
+So you can only change the colors that are used in the components here.
+Change the value of property `Theme` -> `Palette` -> `Primary` -> `Main` -> `Color Hue` to "orange" and press `Save Changes` button at the top of the panel.
+
+(image)
+
+### Debug data flow
+
+In addition to the fact that you can debug the application using the tools built into the browser, 
+Webcodesk provides the ability to visualize the flow of data through the elements.
+
+Open the "Live Preview" tab and click on the `Record Actions` button. 
+It should change its name to `Stop Recording` immediately.
+
+Now click, for example, on the filter buttons: `Active` -> `Completed` -> `All`. 
+And then click on `Stop Recording`.
+You will see a large flow diagram from all the diagrams that you have created. 
+Only the elements through which the flow has been through will be colored.  
+
+(image)
+
+-----
