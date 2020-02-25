@@ -345,6 +345,8 @@ All right, if everything works as intended, you can continue to complete the com
 
 Go to the tab of the `main` page editor, or if it is closed, open it by clicking on the page name in the "Pages" section.
 
+#### Container
+
 Open the `Structure` panel in the page editor, 
 and drag the `Container` component from the resource tree to the free `0 item` area of the group`Main Area Children` in the page structure.
 
@@ -396,6 +398,8 @@ Click `mainPageContainer` instance in the page structure and change the `Max Wid
 <br/>
 <br/>
 
+#### Grid
+
 Find the `Grid` component in the resource tree on the left and drag the name to the empty area inside the `mainPageContainer` on the page, or to the `Content` area in the page structure tree. 
 And rename the instance as `mainPageGrid`.
 
@@ -428,6 +432,8 @@ Now expand the group `Grid` in the properties of the `mainPageGrid` instance, an
 <br/>
 <br/>
 
+#### Typography
+
 Drag the `Typography` component from resources to the first cell of the `mainPageGrid` instance. 
 Rename the instance as `mainPageLabel`. 
 Set the following property values:
@@ -442,35 +448,62 @@ Set the following property values:
 <br/>
 <br/>
 
+#### Paper
+
 Place the `Paper` component from resources in the second cell of the `mainPageGrid` instance.
 Rename the copy of the component as `mainPagePaper` and set the following properties:
 * `Elevation`: 2
 * `Palette` -> `Background Color` -> `Color Hue`: "blue"
 * `Palette` -> `Color` -> `Color Hue`: "white"
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic29.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic29.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### ToDoNotesList
 
 Drag the `ToDoNotesList` component from resources to `0 item` in the array `Children` under the `mainPagePaper` instance.
 Rename the new instance as `mainPageNotesList`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic30.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic30.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### ActionButton
 
 Now add a button that will create new entries in the ToDo list. 
-Drag the `Action Button` component to the free area `Action Button Content` inside the `mainPageFrame` instance (find it in the page structure tree).
+Drag the `ActionButton` component to the free area `Action Button Content` inside the `mainPageFrame` instance (find it in the page structure tree).
 Rename the `Action Button` instance as `mainPageActionButton` and set such properties:
 * `Color`: "primary"
 * `Size`: "large"
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic31.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic31.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Your button is missing a plus icon. The `SvgIcon` component is responsible for icons in the project. It displays SVG drawings as icons.
+
 To save you time, you already have a prepared "plus" icon in the "Templates" section and the "icons" directory - `add-icon`.
 There you will find an instance of the `SvgIcon` component with the preset value of the `Path` property.
 
 So just drag the name `add-icon` from the "Templates" section to the free area `Icon` under the instance `mainPageActionButton` in the page structure tree.
 And don't rename a new instance.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic32.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic32.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 This is what the `main` page on the view should look like.
 
