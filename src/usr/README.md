@@ -505,16 +505,30 @@ And don't rename a new instance.
 <br/>
 <br/>
 
-This is what the `main` page on the view should look like.
+This is what the `main` page on the view should look like in "Live Preview".
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic33.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic33.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+### Second page
 
 Then you need to create a second application page where the user can write the text of a new ToDo entry.
 Create a new page in the "Pages" section and name it as `new-note`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic34.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic34.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now, quickly create a composition on the page.
+
+#### Copy/Paste
 
 Go to the tab with the `main` page. Select the `mainPageFrame` instance in the editor.
 Copy it to the clipboard by pressing the `Ctrl + C` / `Command + C` key combination, or click the copy button on the top toolbar.
@@ -522,12 +536,26 @@ Copy it to the clipboard by pressing the `Ctrl + C` / `Command + C` key combinat
 Now go to the tab of the `new-note` page.
 Select the empty area at the root of the page structure tree and press the insertion key combination from the clipboard: `Ctrl + V` / `Command + V`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic35.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic35.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### Delete
 
 Select the `mainPageActionButton` instance and delete it by pressing the `Delete` key or the `Delete` button on the top toolbar.
 Do the same with `mainPageNavigationTabs` and `mainPageNotesList` instances.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic36.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic36.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### Rename
 
 Now you need to rename the following instances of components on the `new-note` page:
 * `mainPageFrame` rename as `newNotePageFrame`
@@ -536,22 +564,42 @@ Now you need to rename the following instances of components on the `new-note` p
 * `mainPageLabel` rename as `newNotePageLabel`
 * `mainPagePaper` rename as `newNotePagePaper`
 
-Set "New ToDo" to `Text` in the `NewNotePageLabel' instance.
+Set "New ToDo" to `Text` in the `newNotePageLabel` instance.
 
-Set the following properties in the `NewNotePagePaper' instance:
+Set the following properties in the `newNotePagePaper` instance:
 * `Elevation`: 2
 * `Padding Spacing` -> `Padding Left`: 2
 * `Padding Spacing` -> `Padding Right`: 2
 * `Padding Spacing` -> `Padding Bottom`: 2
 * `Palette` -> `Background Color` -> `Color Hue`: "yellow"
 * `Palette` -> `Background Color` -> `Color Shade`: 100
+* `Palette` -> `Color` -> `Color Hue`: "undefined"
 
-Place the `NewNoteForm` component in the `Children` -> `0 item` of the `NewNotePagePaper` instance in the page tree structure.
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic37.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic37.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### NewNoteForm
+
+Place the `NewNoteForm` component in the `Children` -> `0 item` of the `newNotePagePaper` instance in the page tree structure.
 Rename its instance to `newNotePageForm`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic38.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic38.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+
+### Creating flows
 
 So far, nothing works on the pages except switching the active button in navigation.
+
+#### Go to new note page
 
 First, you need to make sure that when you click on the `mainPageActionButton` on the `main` page, 
 the user went to the `new-note` page.
@@ -559,18 +607,30 @@ the user went to the `new-note` page.
 Create a new flow with the name `go-to-new-note-page`. 
 Move the `mainPageActionButton` instance to the `Application` item, thereby replacing it.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic39.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic39.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 The `goToPage` function is responsible for navigation between pages. Place the function in the empty area of the flow diagram.
 The `mainPageActionButton` has an event `onClick` and you can bind this event to the input of the `goToPage` function.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic40.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic40.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
-But you may have noticed that this function is in a set of functions with the name of the `PageRouteNavigation` component.
+#### PageRouteAnchor
+
+But you may have noticed that this function is in a set of functions with the name of the `PageRouteAnchor` component.
 And this function must be somehow related to this component.
 
 Indeed, if you read the specification of the `goToPage` function, 
-you will realize that the output of the `pageRouteAbchorProps` function should be associated with an instance of the `PageRouteNavigation` component. 
+you will realize that the output of the `pageRouteAnchorProps` function should be associated with an instance of the `PageRouteAnchor` component. 
 
 But we don't have a copy of that component on any page. That's because we only did visual components.
 Now it's time to add the required invisible components.
@@ -578,22 +638,39 @@ Now it's time to add the required invisible components.
 Go to the tab of the page `main`. Open the page tree structure and select `mainPageFrame` instance.
 In the property editor find the `Hidden Components` array and add one item to it by clicking the "+1" button.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic41.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic41.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now drag the `PageRouterAnchor` component into the free area `0 item` under `Hidden Components` in the page structure tree.
-Rename the new instance to `NewNotePageRouteAnchor` and set `/new-note` to the property `Page Route Path`.
+Rename the new instance to `newNotePageRouteAnchor` and set `/new-note` to the property `Page Route Path`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic42.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic42.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now you can go to the `go-to-new-note-page` tab of the flow diagram. 
 Drag the `newТotePageRouteAnchor` instance somewhere on the free space in the diagram. 
-Connect the `pageRouteAbchorProps` output of the `goToPage` function to the `props` input of the `newNotePageRouteAnchor` instance.
+Connect the `pageRouteAnchorProps` output of the `goToPage` function to the `props` input of the `newNotePageRouteAnchor` instance.
 
 Because of this connection, the function can read the value of the `Page Route Path` property and navigate to the address specified there.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic43.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic43.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 You can try how it works in the "Live Preview" tab.
+
+#### Go back to home page
 
 Now you need to create a flow diagram to return the user to the main page if the user pressed the `Cancel` button in the form of adding a new note.
 
@@ -603,20 +680,32 @@ Open the tab of `new-note` page and add the item to the property `Hidden Compone
 Drag the `PageRouterAnchor` component to the new item, and rename the instance to `mainPageRouteAnchor`.
 Set "/" to the `PageRoute Path` property.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic44.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic44.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Create a new flow chart named `cancelling-new-note`. 
-Replace the `Application` element with the `newNoteForm` instance.
-Add the `goToPage` function to the diagram and connect its input to the `onCancel` output of the `newNoteForm` instance.
+Replace the `Application` element with the `newNotePageForm` instance.
+Add the `goToPage` function to the diagram and connect its input to the `onCancel` output of the `newNotePageForm` instance.
 
-> The `onCancel` event occurs when the user clicks on the `Cancel` button in the `newNoteForm` form.
+> The `onCancel` event occurs when the user clicks on the `Cancel` button in the `newNotePageForm` form.
 
-Add the `mainPageRouteAnchor` instance (from the "Pages" section and the `new-note page`) to the diagram. 
+Add the `mainPageRouteAnchor` instance (from the "Pages" section and the `new-note` page) to the diagram. 
 Connect the `pageRouteAnchorProps` output of the `goToPage` function to the `props` input of the `mainPageRouteAnchor`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic45.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic45.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 You can make sure that clicking the `Cancel` button brings the user back to the home page in the tab "Live Preview".
+
+#### Load notes on start
 
 The ToDo list on the home page is still empty. 
 But this is fixable because you have a set of functions that you can use to get the list of ToDo notes, filter it and save it.
@@ -626,19 +715,31 @@ you can load all entries from the database and place them in a buffer for furthe
 
 The list should be loaded at the very beginning of the application. This can easily be done in a new flow.
 
-Create a new flow chart named `load-notes-on-start'. 
+Create a new flow chart named `load-notes-on-start`. 
 Put the `getNotes` function somewhere in the free space on the chart.
 Connect the output `onApplicationStart` of the `Application` element to the input of the `getNotes` function. 
 In this way, you have specified that the list of entries should be loaded at the start of the application in your browser.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic46.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic46.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 The loaded list should be saved in the memory buffer. This can be done using the `putIntoNotesBuffer` function.
 Connect the output `notes` of the function `getNotes` to the input of the function `putIntoNotesBuffer`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic47.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic47.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 You need a memory buffer to minimize the number of function calls to update the `mainPageNotesList` component.
+
+#### Buffer listener
 
 You can connect a buffer to the component via the listener function, which will send updated data to the component every time the list in the buffer is changed.
 Otherwise, you would have to add function calls to update the list in `mainPageNotesList` instance every time the list is changed.
@@ -649,66 +750,120 @@ This name is chosen because the list must always be filtered by the selected fil
 Add the `listenToNotesBuffer` function to the diagram and connect its input to the `onApplicationStart` output of the `Application` element. 
 Thus, you have specified that when launching the application in a browser, you should start monitoring the changes in the buffer.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic48.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic48.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now you need to tell what to do when the list in the buffer changes.
 Add the `filterNotes` function and connect its input to the `updatedData` output of the `listenToNotesBuffer` function.
 Add the `mainPageNotesList` instance and connect its input to the `todoNotesListProps` output of the `filterNotes` function.
 Also add the `mainPageNavigationTabs` instance and connect its input to the `navigationTabsProps` output of the `filterNotes` function.
 
-(image)
-
 You probably guessed that in this case `filterNotes` function will read all properties of the `mainPageNavigationTabs` instance and depending on the value 
 in the `Active Tab Type` property will filter the updated list from the buffer and pass it to the `todoNotesListProps` instance properties.
 
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic49.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic49.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### Filter by click
+
 You still need to finish the flow where the list in the buffer is filtered according to the selected filter.
+
 So open the `change-navigation-filter-by-click` flow diagram and add the `getNotes` function to it.
 Connect the `onActiveTabUpdated` output of the `mainPageNavigationTabs` instance (the last one in the chain) to the input of the `getNotes` function.
 And connect the `notes` output of the `getNotes` function to the input of the function `putIntoNotesBuffer`.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic50.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic50.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 If you now check how the application works, you will see only a blank list.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic51.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic51.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+#### Add new note
 
 Now you need to create a flow that allows the user to add new ToDo items to the list.
 
 Create a new flow diagram with the name `adding-new-note`.
-Replace `Application` with the `newNoteForm` instance. 
+Replace `Application` with the `newNotePageForm` instance. 
 Add the `validateNoteText` function to the diagram. 
-Connect the `onSaveNote` output of the `newNoteForm` instance to the input of the `validateNoteText` function.
+Connect the `onSaveNote` output of the `newNotePageForm` instance to the input of the `validateNoteText` function.
 
-> The `onSaveNote` event occurs when the user clicks on the `Save` button in the `newNoteForm` form.
+> The `onSaveNote` event occurs when the user clicks on the `Save` button in the `newNotePageForm` form.
 > The function gets the text of a new record at the output.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic52.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic52.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 The `validateNoteText` function checks the text passed to it, and if the text does not pass the test, the `failure` event occurs.
-You should connect the `setError` function from the `NewNoteForm` set to the `failure` output, 
-and connect the `newNoteFormProps` output of the `setError` function to the `props` input of the `newNoteForm` instance.
+You should connect the `setError` function from the `NewNoteForm` function set to the `failure` output, 
+and connect the `newNoteFormProps` output of the `setError` function to the `props` input of the `newNotePageForm` instance.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic53.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic53.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
-If the verification is successful, the `validateNoteText` function sends valid text to the `noteText` output. 
+If the verification is successful, the `validateNoteText` function sends valid text to the `noteText` output.
+ 
 Connect the `noteText` output to the input of the function `createNewNote` from the `ToDoActions` set.
 Connect the `notes` output of the `createNewNote` function to the `saveNotes` input. 
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic54.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic54.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
-If the `success` event in the `saveNotes` function is executed, it means that the new record has been successfully saved in the local database. 
+If the `success` event in the `saveNotes` function is executed, it means that the new record has been successfully saved in the local database.
+ 
 Connect the input of the `goToPage` function to the `success` output, which in turn connects to the `mainPageRouteAnchor` instance.
 
 This is how you described the chain of actions for creating a new record and saving it in the local database, and navigating to the main page.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic55.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic55.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 You still need to update the list in the buffer so that the new list appears on the main page.
 So add the `putIntoNotesBuffer` function and connect its input to the `notes` output in the `saveNotes` function. 
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic56.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic56.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 You can check how adding a new record in the "Live Preview" tab works.
+
+#### Toggle or delete note
 
 There remains one more flow diagram with deleting the entry and changing the status of the entry in the list.
 Since this is all done by different events that occur in the `mainPageNotesList` instance, you can do everything in one flow diagram.
@@ -722,7 +877,12 @@ And as you may have guessed, it is necessary to update the records in the buffer
 So drag the `putIntoNotesBuffer` function and connect its input to the `notes` output  of the `saveNotes` function.
 All right, you have described the deletion of records by clicking the delete button in the list on the main page.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic57.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic57.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now describe the part of the flow to change the status of the record in the list by clicking on checkbox.
 Add the `toggleNodeCompleted` function and connect its input to the `onToggleNoteCompleted` output of the `mainPageNotesList` instance.
@@ -731,12 +891,25 @@ Then add another element of the `saveNotes` function and connect its input to th
 And of course, you have to pass the new list to the buffer.
 Add the `putIntoNotesBuffer` function and connect its input to the output of the `saveNotes` function.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic58.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic58.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 Now your application has fully implemented functionality. Check it out in "Live Preview". 
 You can also open the application in a separate window by clicking on the `Open URL` button in the top toolbar of the "Live Preview".
 
-### Design System
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic59.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic59.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+
+## Design System
 
 It is possible to set global properties of the entire application in Webcodesk projects. 
 Since this project uses the Material UI library, which allows you to create different themes for components, 
@@ -752,9 +925,14 @@ The project has implemented the smallest part of the Design System settings for 
 So you can only change the colors that are used in the components here.
 Change the value of property `Theme` -> `Palette` -> `Primary` -> `Main` -> `Color Hue` to "orange" and press `Save Changes` button at the top of the panel.
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic60.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic60.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
-### Debug data flow
+## Debug data flow
 
 In addition to the fact that you can debug the application using the tools built into the browser, 
 Webcodesk provides the ability to visualize the flow of data through the elements.
@@ -762,11 +940,33 @@ Webcodesk provides the ability to visualize the flow of data through the element
 Open the "Live Preview" tab and click on the `Record Actions` button. 
 It should change its name to `Stop Recording` immediately.
 
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic61.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic61.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+
 Now click, for example, on the filter buttons: `Active` -> `Completed` -> `All`. 
 And then click on `Stop Recording`.
+
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic62.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic62.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
+
+
 You will see a large flow diagram from all the diagrams that you have created. 
 Only the elements through which the flow has been through will be colored.  
 
-(image)
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic63.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic63.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+</a>
+<br/>
+<br/>
 
 -----
