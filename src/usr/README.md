@@ -1,12 +1,19 @@
+# Webcodesk beginner tutorial
 
-According to the task requirement, you should create a ToDo application from prepared React components and functions.
+Going through this tutorial, you are going to create a ToDo application from prepared React components and functions.
+
 If you have ever created an application with React components, then you should be able to clearly understand what a React component is.
-The concept of "function" is probably also familiar to you. You must be used to writing service code to create logic of how components behave in an application. 
+However, the concept of "function" is probably also familiar to you. 
+
+You must be used to writing source code to create logic of how components behave in an application. 
 In this tutorial, you will try to make the components work without writing code.
 
 Let's get started.
 
 > If you have already done something or created something in this project before you started reading this article, then reload the entire page in your browser and select "Reset to default demo" option after reloading.
+
+## Building instruction
+
 
 On the left side of the screen you can see the resource panel that is available at the very beginning and broken down into sections.
 From the numbers in the section headers, you have 11 components, 13 functions, and one template in the "Templates" section.
@@ -44,6 +51,13 @@ First of all, you need to create a page named `main`, which will serve as the ho
 > The page named "main" in Webcodesk projects is used as the home page and will be available at two addresses: `/` and `/main`
 
 Click on the button with the "plus" icon next to the "Pages" section name.
+
+![Probe 1](https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/Optimized_2.jpg)
+
+<a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/Optimized_2.jpg" target="_blank">
+<img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/Optimized_2.jpg"
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     </a>
 
 (image)
 
