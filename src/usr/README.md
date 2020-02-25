@@ -15,10 +15,10 @@ Let's get started.
 ## Getting familiar with the workspace
 
 On the left side of the screen you can see the resource panel that is available at the very beginning and broken down into sections.
-From the numbers in the section headers, you have 11 components, 13 functions, and one template in the "Templates" section.
+The numbers in the section headers show that you have 11 components, 13 functions, and one template in the "Templates" section.
 
 Let's look at the components first.
-Open the "Components" section. Inside you can see the catalogues with components.
+Open the "Components" section. You can see the directories with components inside.
 
 ### Components
 
@@ -38,8 +38,8 @@ For example, there are three groups in this project:
 
 In Webcodesk you can see how each component behaves individually (like in the famous **Storybook**).
 
-Open any directory and just click on the name of any component.
-A tab should appear in front of you in the central area of the screen, where you can see how the component should look and feel.
+Open any directory and click on the name of any component.
+A tab should appear in front of you in the central area of the screen, where you can see the component look and feel.
 
 Here you can play with the component - change its properties, or click to see the corresponding events occurring.
 In addition, you can also read the component specification, describing its properties and the purpose.
@@ -135,7 +135,7 @@ However, if you want to use the same instances of the component in different pla
 then you just need to give an identical name to these instances of the component.
 
 In this case, Webcodesk automatically created a name for a new instance of the component.
-If you have not changed this name, then when you create a new copy we may accidentally overwrite the properties of the previous instance with the same name.
+If you have not changed this name, then when you create a new copy you may accidentally overwrite the properties of other instances with the same name.
 
 ### First component instance
 
@@ -601,8 +601,8 @@ So far, nothing works on the pages except switching the active button in navigat
 
 #### Go to new note page
 
-First, you need to make sure that when you click on the `mainPageActionButton` on the `main` page, 
-the user went to the `new-note` page.
+First, you need to make sure that when the user clicks on the `mainPageActionButton` on the `main` page, 
+the user goes to the `new-note` page.
 
 Create a new flow with the name `go-to-new-note-page`. 
 Move the `mainPageActionButton` instance to the `Application` item, thereby replacing it.
@@ -913,7 +913,7 @@ You can also open the application in a separate window by clicking on the `Open 
 
 It is possible to set global properties of the entire application in Webcodesk projects. 
 Since this project uses the Material UI library, which allows you to create different themes for components, 
-the ability to change the settings of the theme was added to the project.
+there are settings of the theme in the project.
 
 Open the "Live Preview" tab and click the `Settings` button on the top toolbar. 
 You will see a property panel similar to the property panel in the page editor. 
