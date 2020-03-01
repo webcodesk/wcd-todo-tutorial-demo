@@ -10,6 +10,10 @@ In this tutorial, you will try to make the components work without writing code.
 
 Let's get started.
 
+> If you are not comfortable reading the tutorial here, you can open it in a separate tab in your browser.
+
+* [Open the tutorial in a separate tab in the browser](https://webcodesk.com/tutorial)
+
 ***If you have already done something or created something in this project before you started reading this article, then reload the entire page in your browser and select "Reset to default demo" option after reloading.***
 
 ## Getting familiar with the workspace
@@ -31,7 +35,7 @@ For example, there are three groups in this project:
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic1.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic1.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 
 #### Component playground
@@ -48,7 +52,7 @@ This is cool because you are not familiar with the components at this stage and 
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic2.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic2.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 
 ### Functions
@@ -62,7 +66,7 @@ If you click on the name of the functions set, in a new tab you can read the spe
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic3.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic3.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 
 ## Building the application
@@ -82,7 +86,7 @@ Click on the button with the "plus" icon next to the "Pages" section name.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic4.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic4.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -91,7 +95,7 @@ Type in the page name `main` and click the `Create` button in the dialog.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic5.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic5.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -102,7 +106,7 @@ A new tab should open in front of you - this is the editor of the `main` page.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic6.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic6.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -114,7 +118,7 @@ In this way, you will open the left panel in the page editor, where you will be 
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic7.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic7.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -148,7 +152,7 @@ Now click the `Save` button on the top toolbar - this way we will save our chang
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic8.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic8.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -161,7 +165,7 @@ Each of these areas corresponds to some property with the type `Element` or `Nod
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic9.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic9.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -171,7 +175,7 @@ Highlight the newly created `navigationTabs` instance (click on it) and rename i
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic10.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic10.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -186,7 +190,7 @@ Now select the name of the color `white` from the drop-down list in the `Color H
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic11.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic11.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -200,7 +204,7 @@ With `mainPageFrame` selected, find the property `Color Hue` in the group `Main 
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic12.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic12.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -223,7 +227,7 @@ Click on the button with the "plus" icon next to the "Flows" section name.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic13.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic13.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -237,7 +241,7 @@ So give the name `change-navigation-filter-by-click` to the flow.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic14.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic14.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -249,7 +253,7 @@ you can move the whole picture with the mouse - press the left mouse button and 
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic15.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic15.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -261,7 +265,7 @@ The `Application` element will be automatically replaced by the `mainPageNavigat
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic16.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic16.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -286,7 +290,7 @@ If you set a different value in this property, you can see that the active butto
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic17.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic17.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -302,7 +306,7 @@ Go to the `change-navigation-filter-by-click` tab, find the `setActiveNavigation
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic18.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic18.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -318,7 +322,7 @@ Now you need to connect the `onChangeActiveTab` output of the `mainPageNavigatio
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic19.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic19.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -332,7 +336,7 @@ Connect the `navigationTabsProps` output of the `setActiveNavigationTab` functio
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic20.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic20.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -354,7 +358,7 @@ Rename the `container` instance as `mainPageContainer`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic21.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic21.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -370,7 +374,7 @@ For now, just understand that you can increase the number of items in an array o
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic22.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic22.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -384,7 +388,7 @@ Expand it and change the values of the `Padding Top` property to `100px`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic23.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic23.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -393,7 +397,7 @@ Click `mainPageContainer` instance in the page structure and change the `Max Wid
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic24.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic24.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -405,7 +409,7 @@ And rename the instance as `mainPageGrid`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic25.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic25.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -418,7 +422,7 @@ So expand the `Cells` array and remove one item from the array by clicking on th
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic26.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic26.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -427,7 +431,7 @@ Now expand the group `Grid` in the properties of the `mainPageGrid` instance, an
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic27.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic27.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -443,7 +447,7 @@ Set the following property values:
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic28.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic28.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -458,7 +462,7 @@ Rename the copy of the component as `mainPagePaper` and set the following proper
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic29.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic29.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -470,7 +474,7 @@ Rename the new instance as `mainPageNotesList`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic30.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic30.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -485,7 +489,7 @@ Rename the `Action Button` instance as `mainPageActionButton` and set such prope
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic31.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic31.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -500,7 +504,7 @@ And don't rename a new instance.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic32.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic32.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -509,7 +513,7 @@ This is what the `main` page on the view should look like in "Live Preview".
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic33.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic33.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -521,7 +525,7 @@ Create a new page in the "Pages" section and name it as `new-note`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic34.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic34.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -538,7 +542,7 @@ Select the empty area at the root of the page structure tree and press the inser
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic35.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic35.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -550,7 +554,7 @@ Do the same with `mainPageNavigationTabs` and `mainPageNotesList` instances.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic36.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic36.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -577,7 +581,7 @@ Set the following properties in the `newNotePagePaper` instance:
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic37.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic37.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -589,7 +593,7 @@ Rename its instance to `newNotePageForm`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic38.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic38.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -609,7 +613,7 @@ Move the `mainPageActionButton` instance to the `Application` item, thereby repl
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic39.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic39.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -619,7 +623,7 @@ The `mainPageActionButton` has an event `onClick` and you can bind this event to
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic40.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic40.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -640,7 +644,7 @@ In the property editor find the `Hidden Components` array and add one item to it
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic41.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic41.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -650,7 +654,7 @@ Rename the new instance to `newNotePageRouteAnchor` and set `/new-note` to the p
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic42.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic42.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -663,7 +667,7 @@ Because of this connection, the function can read the value of the `Page Route P
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic43.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic43.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -682,7 +686,7 @@ Set "/" to the `PageRoute Path` property.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic44.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic44.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -698,7 +702,7 @@ Connect the `pageRouteAnchorProps` output of the `goToPage` function to the `pro
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic45.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic45.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -722,7 +726,7 @@ In this way, you have specified that the list of entries should be loaded at the
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic46.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic46.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -732,7 +736,7 @@ Connect the output `notes` of the function `getNotes` to the input of the functi
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic47.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic47.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -752,7 +756,7 @@ Thus, you have specified that when launching the application in a browser, you s
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic48.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic48.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -767,7 +771,7 @@ in the `Active Tab Type` property will filter the updated list from the buffer a
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic49.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic49.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -782,7 +786,7 @@ And connect the `notes` output of the `getNotes` function to the input of the fu
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic50.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic50.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -791,7 +795,7 @@ If you now check how the application works, you will see only a blank list.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic51.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic51.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -810,7 +814,7 @@ Connect the `onSaveNote` output of the `newNotePageForm` instance to the input o
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic52.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic52.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -821,7 +825,7 @@ and connect the `newNoteFormProps` output of the `setError` function to the `pro
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic53.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic53.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -833,7 +837,7 @@ Connect the `notes` output of the `createNewNote` function to the `saveNotes` in
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic54.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic54.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -846,7 +850,7 @@ This is how you described the chain of actions for creating a new record and sav
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic55.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic55.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -856,7 +860,7 @@ So add the `putIntoNotesBuffer` function and connect its input to the `notes` ou
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic56.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic56.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -879,7 +883,7 @@ All right, you have described the deletion of records by clicking the delete but
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic57.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic57.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -893,7 +897,7 @@ Add the `putIntoNotesBuffer` function and connect its input to the output of the
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic58.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic58.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -903,7 +907,7 @@ You can also open the application in a separate window by clicking on the `Open 
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic59.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic59.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -927,7 +931,7 @@ Change the value of property `Theme` -> `Palette` -> `Primary` -> `Main` -> `Col
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic60.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic60.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -942,7 +946,7 @@ It should change its name to `Stop Recording` immediately.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic61.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic61.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -953,7 +957,7 @@ And then click on `Stop Recording`.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic62.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic62.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
@@ -964,7 +968,7 @@ Only the elements through which the flow has been through will be colored.
 
 <a href="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic63.jpg" target="_blank">
 <img src="https://raw.githubusercontent.com/webcodesk/wcd-todo-tutorial-demo/master/pics/pic63.jpg"
-     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 70%" />
+     style="border: 1px solid #cdcdcd; border-radius: 4px; width: 99%" />
 </a>
 <br/>
 <br/>
