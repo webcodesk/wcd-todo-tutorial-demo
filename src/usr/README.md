@@ -296,7 +296,7 @@ If you set a different value in this property, you can see that the active butto
 <br/>
 
 Obviously, to switch the active button on the `onChangeActiveTab` event, you need to change the `Active Tab Type` property.
-You have to describe it somehow in your `exchange-navigation-filter-by-click` flow.
+You have to describe it somehow in your `change-navigation-filter-by-click` flow.
 
 > Changing properties in instances of components is the responsibility of the corresponding functions. 
 In this project, such functions are included in function sets with names identical to the names of components whose properties they can change.
